@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "publish-packages": "turbo run build lint && changeset version && changeset publish"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^1.9.7",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.6.10",
+  "name": "repo",
+  "dependencies": {
+    "@changesets/cli": "^2.26.2",
+    "react-static-clutch-embed": "workspace:^",
+    "static-clutch-embed": "workspace:^",
+    "typescript": "^5.3.3"
+  }
+}
